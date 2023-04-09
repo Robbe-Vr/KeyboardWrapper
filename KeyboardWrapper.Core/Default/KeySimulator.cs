@@ -16,11 +16,11 @@ namespace KeyboardWrapper.Core.Default
         private static Timer releaseTimer;
         private static int rerelease = 0;
 
-        [DllImport(@"C:\\Users\\Robbe\\source\\repos\\PerformKeystroke\\Debug\\PerformKeystroke.dll", CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("PerformKeystroke.dll", CallingConvention = CallingConvention.Cdecl)]
         private static extern void PressKey(string keyName);
-        [DllImport(@"C:\\Users\\Robbe\\source\\repos\\PerformKeystroke\\Debug\\PerformKeystroke.dll", CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("PerformKeystroke.dll", CallingConvention = CallingConvention.Cdecl)]
         private static extern void ReleaseKey(string keyName);
-        [DllImport(@"C:\\Users\\Robbe\\source\\repos\\PerformKeystroke\\Debug\\PerformKeystroke.dll", CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("PerformKeystroke.dll", CallingConvention = CallingConvention.Cdecl)]
         private static extern void PerformKey(string keyName);
 
         internal static void PerformKeyPress(Keys key)
